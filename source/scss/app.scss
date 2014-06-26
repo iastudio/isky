@@ -72,11 +72,16 @@ h1, h2, h3, h4, h5 {
 }
 
 h1 {
-	font-size: 24px;
+  font-family: "Neo Sans Pro", sans-serif;
+  font-size: 36px;
 }
 
 h2 {
-	font-size: 20px;
+	font-family: "Neo Sans Pro", sans-serif;
+  font-size: 20px;
+  &.blue {
+    color: #004E73;
+  }
 }
 
 h3 {
@@ -104,9 +109,9 @@ a, input, textarea, .btn {
 }
 
 a {
-	color: #000;
+	color: #0088C6;
 	&:hover {
-		color: lighten(#000, 20%);
+		color: lighten(#0088C6, 10%);
 	}
 }
 

@@ -9,6 +9,66 @@ html(lang='ru').no-js
     .page-wrap
       include includes/header
       main
-
+        .container
+          aside
+            h2 Каталог продукции
+            nav.accordion
+              ul
+                li.active
+                  a(href="#").accordion__parent Автопринадлежности
+                  ul
+                    li: a(href="#") Компрессоры
+                    li: a(href="#") Провода прикуривания
+                li
+                  a(href="#").accordion__parent Коврики
+                  ul
+                    li: a(href="#") Компрессоры
+                    li: a(href="#") Провода прикуривания
+                li
+                  a(href="#").accordion__parent Чехлы и накидки
+                  ul
+                    li: a(href="#") Компрессоры
+                    li: a(href="#") Провода прикуривания
+                li
+                  a(href="#").accordion__parent Чехлы на руль
+                  ul
+                    li: a(href="#") Компрессоры
+                    li: a(href="#") Провода прикуривания
+          .content-small
+            h1 Для тех, кто любит<br>путешествовать<br>за рулём
+            p Бренд iSky создан для тех, кто на сумасшедшей скорости съезжает с заснеженной горы на лыжах или сноуборде, для тех кто покоряет волны на кайте и тех, кто с волнением изучает подводный мир…
+            p Мы надеемся заслужить любовь тех, кто каждые выходные ищет новые яркие ощущения, стремясь к ним за рулём своего авто. Свобода и страсть, стремления и свершения – вот ценности нашей аудитории, а значит ценности бренда iSky!
+          aside
+            h2.blue Последние новости
+            .news-item
+              span.date 8 июня 2014
+              p Обезьянки, работающие на сочинских пляжах, высылают деньги семьям в Африку.
+              a.readmore(href="#") подробнее »
+            .news-item
+              span.date 8 июня 2014
+              p Обезьянки, работающие на сочинских пляжах, высылают деньги семьям в Африку.
+              a.readmore(href="#") подробнее »
+            a(href="#").right.allnews все новости
+        .container
+          h1.blue Новинки
+          .featured
+            a.featured__item(href="#")
+              img(src="i/placeholders/placeholder-1.jpg")
+              .featured__item__desc Накидка черная
+            a.featured__item(href="#")
+              img(src="i/placeholders/placeholder-2.jpg")
+              .featured__item__desc Накидка черная
+            a.featured__item(href="#")
+              img(src="i/placeholders/placeholder-3.jpg")
+              .featured__item__desc Накидка черная
+            a.featured__item(href="#")
+              img(src="i/placeholders/placeholder-4.jpg")
+              .featured__item__desc Накидка черная
+            a.featured__item(href="#")
+              img(src="i/placeholders/placeholder-2.jpg")
+              .featured__item__desc Накидка черная
+            a.featured__item(href="#")
+              img(src="i/placeholders/placeholder-3.jpg")
+              .featured__item__desc Накидка черная
       include includes/footer
     include includes/tail

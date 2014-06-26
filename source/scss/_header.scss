@@ -3,6 +3,7 @@ header {
   min-height: 200px;
   height: auto;
   padding-top: 21px;
+  margin-bottom: 22px;
   background-color: #008CC9;
   @include background-image(linear-gradient(to bottom, rgba(0,91,162,.9) 0%, rgba(0,91,162,.9) 5.37%, rgba(0,118,188,.9) 34.96%, rgba(0,151,204,.9) 67.72%, rgba(0,176,225,.9) 86.06%, rgba(98,214,255,.9) 100%));
 

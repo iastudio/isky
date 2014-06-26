@@ -1,40 +1,64 @@
 
-	// ///////////////
-	//    SLIDER   //
-	// ///////////////
+var sliderAuto = true; // Slider auto-change
+var sliderTimeout = 4000; // Slider auto-change interval
 
-	(function(){
-		if ($('.slider__item').length > 0) {
+/////////////////
+//   SLIDER    //
+/////////////////
 
-			if ($('.header__slider').attr('data-count') == undefined)
-				$('.header__slider').attr('data-count', 0);
+(function(){
+	if ($('.slider__item').length > 0) {
 
-			var count = parseInt($('.header__slider').attr('data-count'));
+		if ($('.header__slider').attr('data-count') == undefined)
+			$('.header__slider').attr('data-count', 0);
 
-			var slidesCount = $('.header__slider .slider__item').size()-1;
-		}
+		var count = parseInt($('.header__slider').attr('data-count'));
 
-		$('.header__slider .slider__nav').on('click', function(e) {
-			e.preventDefault();
-			if ($('.header__slider .slider__item:animated').size()>0) return;
-			var direction;
-			$(this).hasClass('slider__nav--next') ? direction = 1 : direction = 0;
+		var slidesCount = $('.header__slider .slider__item').size()-1;
+	}
 
-			if (direction == 0)
-				(count == 0) ? count = slidesCount + 1 : count = count;
-			else
-				(count == slidesCount) ? count = - 1 : count = count;
+	$('.header__slider .slider__nav').on('click', function(e) {
+		e.preventDefault();
+		if ($('.header__slider .slider__item:animated').size()>0) return;
+		var direction;
+		$(this).hasClass('slider__nav--next') ? direction = 1 : direction = 0;
 
-			$('.header__slider .slider__item.active').fadeOut(300, function() {
-				$(this).removeClass('active');
-				(direction == 1) ? count++ : count--;
-				$('.header__slider .slider__item').eq(count).fadeIn(300);
-        $('.header__slider .slider__item').eq(count).addClass('active');
-				$('.header__slider').attr('data-count', count);
-			});
+		if (direction == 0)
+			(count == 0) ? count = slidesCount + 1 : count = count;
+		else
+			(count == slidesCount) ? count = - 1 : count = count;
+
+		$('.header__slider .slider__item.active').fadeOut(300, function() {
+			$(this).removeClass('active');
+			(direction == 1) ? count++ : count--;
+			$('.header__slider .slider__item').eq(count).fadeIn(300);
+            $('.header__slider .slider__item').eq(count).addClass('active');
+			$('.header__slider').attr('data-count', count);
 		});
+	});
 
-	})();
+    if (sliderAuto) {
+        setInterval(function(){
+            $('.header__slider .slider__nav--next').click();
+        }, sliderTimeout);
+    }
+
+})();
+
+
+////////////////////////
+//     ACCORDION      //
+////////////////////////
+
+(function(){
+
+    $('.accordion a.accordion__parent').on('click', function(e) {
+        e.preventDefault();
+        $('.accordion .active').removeClass('active');
+        $(this).parent().addClass('active');
+    });
+
+})();
 
 // 	////////////////////////
 // 	//  PLACEHOLDERS FIX  //
