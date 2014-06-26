@@ -943,7 +943,85 @@ header .header__social a.social__vk {
 
 /* line 1, ../scss/_slider.scss */
 .header__slider {
-  height: 400px;
+  height: 450px;
+  position: relative;
+  z-index: 0;
+}
+/* line 5, ../scss/_slider.scss */
+.header__slider:before {
+  display: block;
+  position: absolute;
+  content: ' ';
+  width: 100%;
+  height: 500px;
+  background: url("../i/slider-bg.png") center bottom no-repeat;
+  background-size: 1150px;
+}
+/* line 15, ../scss/_slider.scss */
+.header__slider .container {
+  height: 100%;
+}
+/* line 19, ../scss/_slider.scss */
+.header__slider .slider__container {
+  position: relative;
+  height: 100%;
+}
+/* line 23, ../scss/_slider.scss */
+.header__slider .slider__container .slider__item {
+  position: absolute;
+  bottom: 40px;
+  margin: 0;
+  padding: 0;
+  list-style: none;
+  float: left;
+  width: 100%;
+  height: auto;
+  display: none;
+}
+/* line 32, ../scss/_slider.scss */
+.header__slider .slider__container .slider__item img {
+  height: 100%;
+  width: auto;
+}
+/* line 36, ../scss/_slider.scss */
+.header__slider .slider__container .slider__item h1 {
+  position: absolute;
+  left: 0;
+  top: -50px;
+  color: #fffeff;
+  font-family: "Neo Sans Pro", sans-serif;
+  font-size: 45px;
+  text-shadow: 0 0 25px #006fb3;
+}
+/* line 44, ../scss/_slider.scss */
+.header__slider .slider__container .slider__item.active {
+  display: block;
+}
+/* line 49, ../scss/_slider.scss */
+.header__slider a.slider__nav {
+  position: absolute;
+  top: 50%;
+  margin-top: -50px;
+  z-index: 999;
+  display: block;
+  width: 34px;
+  height: 80px;
+  cursor: pointer;
+  background: url("../i/slider-nav-sprite.png") 0 0 no-repeat;
+}
+/* line 59, ../scss/_slider.scss */
+.header__slider a.slider__nav:hover {
+  opacity: 0.8;
+  transition: all 0.2s ease;
+}
+/* line 64, ../scss/_slider.scss */
+.header__slider a.slider__nav.slider__nav--prev {
+  left: 5px;
+}
+/* line 68, ../scss/_slider.scss */
+.header__slider a.slider__nav.slider__nav--next {
+  right: 5px;
+  background-position: -34px 0;
 }
 
 /* line 35, ../scss/app.scss */
