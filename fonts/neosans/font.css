@@ -1,0 +1,9 @@
+
+@font-face {
+	font-family: 'Neo Sans Pro';
+	src: url('NeoSansPro-Regular.eot?') format('eot'),
+	     url('NeoSansPro-Regular.otf')  format('opentype'),
+	     url('NeoSansPro-Regular.woff') format('woff'),
+	     url('NeoSansPro-Regular.ttf')  format('truetype'),
+	     url('NeoSansPro-Regular.svg#NeoSansPro-Regular') format('svg');
+}
