@@ -1,6 +1,7 @@
 header
   .container
     .header__logo: a(href="/"): img(src="i/logo.png", width="137", height="77")
+    .header__slogan Удовольствие от поездки
     .header__navigation
       nav
         ul
@@ -16,5 +17,6 @@ header
       a(href="#").social__ig
       a(href="#").social__yt
       a(href="#").social__vk
-  include slider
+  if (active == 1)
+    include slider
 

@@ -15,7 +15,7 @@ input[type="url"],
 textarea, .select {
 
   @include placeholder {
-    color: #807a7a;
+    color: #656565;
     font-size: 14px;
   }
 
@@ -23,23 +23,19 @@ textarea, .select {
   display: block;
   margin-bottom: 18px;
 
-  width: 300px;
+  width: 100%;
   height: 41px;
   padding: 13px 16px;
 
-  border: 1px solid #e0e0e0;
-  @include border-radius(3px);
-  @include background-clip(padding-box);
-  background-color: #f7f7f7;
-  @include background-image(linear-gradient(to bottom, #fff 0%, #f7f7f7 100%));
+  border: 1px solid #D6D6D6;
+  background-color: #FFF;
 
-
-  color: #807a7a;
+  color: #656565;
   font-size: 14px;
 }
 
 textarea {
-  height: 100px;
+  height: 160px;
 }
 
 .btn, a.btn, input[type=submit] {
@@ -59,24 +55,15 @@ textarea {
   text-align: center;
   color: #fff;
   font-size: 18px;
-  font-weight: 600;
-  @include text-shadow(0 1px 0 #025851);
 
   padding: 12px 20px;
-
-  border: 1px solid #15685c;
-  @include border-radius(3px);
-  @include box-shadow(inset 0 1px 0 #85dbd7);
-  background-color: #1b7b6d;
-  @include background-image(linear-gradient(to bottom, #1b7b6d 0%, #3f9995 100%));
-
   margin-bottom: 18px;
 
+  background-color: #0096C7;
+
   &:hover {
-    background-color: #1b7b6d;
-    @include background-image(linear-gradient(to bottom, #3f9995 0%, #1b7b6d 100%));
+    background-color: #00B5F0;
     &:active {
-      @include box-shadow(inset 0 -1px 0 #85dbd7);
       top: 3px;
     }
   }
