@@ -3,7 +3,7 @@
   <head>
     <meta charset="utf-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <title>Главная - iSky - Удовольствие от поездки</title>
+    <title>Типовая внутренняя страница - iSky - Удовольствие от поездки</title>
     <meta name="keywords" content="">
     <meta name="description" content="">
     <meta name="viewport" content="width=device-width, initial-scale=1">
@@ -51,21 +51,6 @@
           </div>
           <div class="header__social"><a href="#" class="social__ig"></a><a href="#" class="social__yt"></a><a href="#" class="social__vk"></a></div>
         </div>
-        <div class="header__slider">
-          <div class="container">
-            <div class="slider__container">
-              <div class="slider__item active">
-                <h1>Удовольствие от поездки</h1><img src="i/slider/slide-1.png">
-              </div>
-              <div class="slider__item">
-                <h1>Удовольствие от поездки2</h1><img src="i/slider/slide-1.png">
-              </div>
-              <div class="slider__item">
-                <h1>Удовольствие от поездки3</h1><img src="i/slider/slide-1.png">
-              </div>
-            </div><a href="#" class="slider__nav slider__nav--next"></a><a href="#" class="slider__nav slider__nav--prev"></a>
-          </div>
-        </div>
       </header>
       <main>
         <div class="container">
@@ -73,16 +58,18 @@
             <h2>Каталог продукции</h2>
             <nav class="accordion">
               <ul>
-                <li class="active"><a href="#" class="accordion__parent">Автопринадлежности</a>
+                <li><a href="#" class="accordion__parent">Автопринадлежности</a>
                   <ul>
                     <li><a href="#">Компрессоры</a></li>
                     <li><a href="#">Провода прикуривания</a></li>
                   </ul>
                 </li>
-                <li><a href="#" class="accordion__parent">Коврики</a>
+                <li class="active"><a href="#" class="accordion__parent">Коврики</a>
                   <ul>
-                    <li><a href="#">Компрессоры</a></li>
-                    <li><a href="#">Провода прикуривания</a></li>
+                    <li class="subactive"><a href="#">Ванночки</a></li>
+                    <li><a href="#">Плоские</a></li>
+                    <li><a href="#">Комбинированные</a></li>
+                    <li><a href="#">Трансформ</a></li>
                   </ul>
                 </li>
                 <li><a href="#" class="accordion__parent">Чехлы и накидки</a>
@@ -100,30 +87,69 @@
               </ul>
             </nav>
           </aside>
-          <div class="content-small">
-            <h1>Для тех, кто любит<br>путешествовать<br>за рулём</h1>
+          <div class="content">
+            <h1>Типовая страница</h1>
+            <div class="breadcrumbs">
+              <ul>
+                <li><a href="#">Главная</a></li>
+                <li><a href="#">Типовая страница</a></li>
+              </ul>
+            </div>
             <p>Бренд iSky создан для тех, кто на сумасшедшей скорости съезжает с заснеженной горы на лыжах или сноуборде, для тех кто покоряет волны на кайте и тех, кто с волнением изучает подводный мир…</p>
             <p>Мы надеемся заслужить любовь тех, кто каждые выходные ищет новые яркие ощущения, стремясь к ним за рулём своего авто. Свобода и страсть, стремления и свершения – вот ценности нашей аудитории, а значит ценности бренда iSky!</p>
+            <h2>Заголовок H2</h2>
+            <p>Мы надеемся заслужить любовь тех, кто каждые выходные ищет новые яркие ощущения, стремясь к ним за рулём своего авто. Свобода и страсть, стремления и свершения – вот ценности нашей аудитории, а значит ценности бренда iSky!</p>
+            <h3>Заголовок h3</h3>
+            <p>Мы надеемся заслужить любовь тех, кто каждые выходные ищет новые яркие ощущения, стремясь к ним за рулём своего авто. Свобода и страсть, стремления и свершения – вот ценности нашей аудитории, а значит ценности бренда iSky!</p>
+            <table>
+              <tr>
+                <th>Дата</th>
+                <th>Название</th>
+                <th>Значение</th>
+                <th>Остаток</th>
+              </tr>
+              <tr>
+                <td>12 апреля 2014</td>
+                <td>Коврики</td>
+                <td>45</td>
+                <td>45</td>
+              </tr>
+              <tr>
+                <td>15 апреля 2014</td>
+                <td>Чехлы</td>
+                <td>574</td>
+                <td>574</td>
+              </tr>
+              <tr>
+                <td>18 апреля 2014</td>
+                <td>Щетки</td>
+                <td>78</td>
+                <td>78</td>
+              </tr>
+              <tr>
+                <td>19 апреля 2014</td>
+                <td>Органайзеры</td>
+                <td>88</td>
+                <td>88</td>
+              </tr>
+            </table>
+            <h3>Стать партнером</h3>
+            <form>
+              <div>
+                <div class="col-1-2">
+                  <input type="text" placeholder="Ваше имя">
+                  <input type="tel" placeholder="Телефон">
+                  <input type="email" placeholder="E-mail">
+                </div>
+                <div class="col-1-2">
+                  <textarea placeholder="Сообщение"></textarea>
+                </div>
+              </div>
+              <div>
+                <input type="submit" value="Отправить" class="right">
+              </div>
+            </form>
           </div>
-          <aside>
-            <h2 class="blue">Последние новости</h2>
-            <div class="news-item"><span class="date">8 июня 2014</span>
-              <p>Обезьянки, работающие на сочинских пляжах, высылают деньги семьям в Африку.</p><a href="#" class="readmore">подробнее »</a>
-            </div>
-            <div class="news-item"><span class="date">8 июня 2014</span>
-              <p>Обезьянки, работающие на сочинских пляжах, высылают деньги семьям в Африку.</p><a href="#" class="readmore">подробнее »</a>
-            </div><a href="#" class="right allnews">все новости</a>
-          </aside>
-        </div>
-        <div class="container">
-          <h1 class="blue">Новинки</h1>
-          <div class="featured"><a href="#" class="featured__item"><img src="i/placeholders/placeholder-1.jpg">
-              <div class="featured__item__desc">Накидка черная</div></a><a href="#" class="featured__item"><img src="i/placeholders/placeholder-2.jpg">
-              <div class="featured__item__desc">Накидка черная</div></a><a href="#" class="featured__item"><img src="i/placeholders/placeholder-3.jpg">
-              <div class="featured__item__desc">Накидка черная</div></a><a href="#" class="featured__item"><img src="i/placeholders/placeholder-4.jpg">
-              <div class="featured__item__desc">Накидка черная</div></a><a href="#" class="featured__item"><img src="i/placeholders/placeholder-2.jpg">
-              <div class="featured__item__desc">Накидка черная</div></a><a href="#" class="featured__item"><img src="i/placeholders/placeholder-3.jpg">
-              <div class="featured__item__desc">Накидка черная</div></a></div>
         </div>
       </main>
       <footer>
