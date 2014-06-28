@@ -1,3 +1,19 @@
+
+html, body {
+  height: 100%;
+}
+.page-wrap {
+  min-height: 100%;
+  margin-bottom: -300px;
+  &:after {
+    content: "";
+    display: block;
+  }
+}
+footer, .page-wrap:after {
+  height: 300px;
+}
+
 .col-1-2 {
   @include col(1/2);
 }
@@ -63,6 +79,10 @@ main {
     &.blue {
       background: #00AEDE;
       box-shadow: 17px 0 0 #00AEDE, -17px 0 0 #00AEDE;
+    }
+    &.orange {
+      background: #F37005;
+      box-shadow: 17px 0 0 #F37005, -17px 0 0 #F37005;
     }
   }
 }

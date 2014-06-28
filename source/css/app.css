@@ -98,7 +98,28 @@ article, aside, details, figcaption, figure, footer, header, hgroup, main, menu,
   clear: both;
 }
 
-/* line 1, ../scss/_else.scss */
+/* line 2, ../scss/_else.scss */
+html, body {
+  height: 100%;
+}
+
+/* line 5, ../scss/_else.scss */
+.page-wrap {
+  min-height: 100%;
+  margin-bottom: -300px;
+}
+/* line 8, ../scss/_else.scss */
+.page-wrap:after {
+  content: "";
+  display: block;
+}
+
+/* line 13, ../scss/_else.scss */
+footer, .page-wrap:after {
+  height: 300px;
+}
+
+/* line 17, ../scss/_else.scss */
 .col-1-2 {
   *zoom: 1;
   float: left;
@@ -125,7 +146,7 @@ article, aside, details, figcaption, figure, footer, header, hgroup, main, menu,
   margin-right: 0%;
 }
 
-/* line 5, ../scss/_else.scss */
+/* line 21, ../scss/_else.scss */
 .col {
   *zoom: 1;
   float: left;
@@ -152,7 +173,7 @@ article, aside, details, figcaption, figure, footer, header, hgroup, main, menu,
   margin-right: 0%;
 }
 
-/* line 9, ../scss/_else.scss */
+/* line 25, ../scss/_else.scss */
 aside {
   *zoom: 1;
   float: left;
@@ -179,7 +200,7 @@ aside:last-child {
   margin-right: 0%;
 }
 
-/* line 13, ../scss/_else.scss */
+/* line 29, ../scss/_else.scss */
 .content-small {
   *zoom: 1;
   float: left;
@@ -207,7 +228,7 @@ aside:last-child {
   margin-right: 0%;
 }
 
-/* line 18, ../scss/_else.scss */
+/* line 34, ../scss/_else.scss */
 .content {
   *zoom: 1;
   float: left;
@@ -235,7 +256,7 @@ aside:last-child {
   margin-right: 0%;
 }
 
-/* line 23, ../scss/_else.scss */
+/* line 39, ../scss/_else.scss */
 .breadcrumbs {
   *zoom: 1;
   margin-bottom: 30px;
@@ -249,23 +270,23 @@ aside:last-child {
 .breadcrumbs:after {
   clear: both;
 }
-/* line 27, ../scss/_else.scss */
+/* line 43, ../scss/_else.scss */
 .breadcrumbs ul li {
   float: left;
   margin-right: 22px;
 }
-/* line 30, ../scss/_else.scss */
+/* line 46, ../scss/_else.scss */
 .breadcrumbs ul li:after {
   content: '\2192';
   position: relative;
   right: -10px;
 }
-/* line 36, ../scss/_else.scss */
+/* line 52, ../scss/_else.scss */
 .breadcrumbs ul li:last-child:after {
   display: none;
 }
 
-/* line 45, ../scss/_else.scss */
+/* line 61, ../scss/_else.scss */
 main h1 {
   display: inline;
   background: #87b324;
@@ -278,19 +299,24 @@ main h1 {
   position: relative;
   left: 17px;
 }
-/* line 58, ../scss/_else.scss */
+/* line 74, ../scss/_else.scss */
 main h1:after {
   display: block;
   content: ' ';
   margin-bottom: 38px;
 }
-/* line 63, ../scss/_else.scss */
+/* line 79, ../scss/_else.scss */
 main h1.blue {
   background: #00AEDE;
   box-shadow: 17px 0 0 #00AEDE, -17px 0 0 #00AEDE;
 }
+/* line 83, ../scss/_else.scss */
+main h1.orange {
+  background: #F37005;
+  box-shadow: 17px 0 0 #F37005, -17px 0 0 #F37005;
+}
 
-/* line 71, ../scss/_else.scss */
+/* line 91, ../scss/_else.scss */
 .featured .featured__item {
   *zoom: 1;
   float: left;
@@ -319,18 +345,18 @@ main h1.blue {
 .featured .featured__item:after {
   clear: both;
 }
-/* line 80, ../scss/_else.scss */
+/* line 100, ../scss/_else.scss */
 .featured .featured__item:last-child {
   border-right: 1px solid #EAEAEA;
 }
-/* line 83, ../scss/_else.scss */
+/* line 103, ../scss/_else.scss */
 .featured .featured__item img {
   -moz-transition: all 0.5s ease-in-out;
   -o-transition: all 0.5s ease-in-out;
   -webkit-transition: all 0.5s ease-in-out;
   transition: all 0.5s ease-in-out;
 }
-/* line 86, ../scss/_else.scss */
+/* line 106, ../scss/_else.scss */
 .featured .featured__item .featured__item__desc {
   -moz-transition: all 0.3s ease-in-out;
   -o-transition: all 0.3s ease-in-out;
@@ -354,52 +380,52 @@ main h1.blue {
   padding-top: 30px;
   line-height: 1;
 }
-/* line 105, ../scss/_else.scss */
+/* line 125, ../scss/_else.scss */
 .featured .featured__item:hover img {
   opacity: 0.5;
 }
-/* line 108, ../scss/_else.scss */
+/* line 128, ../scss/_else.scss */
 .featured .featured__item:hover .featured__item__desc {
   top: 50%;
 }
 
-/* line 115, ../scss/_else.scss */
+/* line 135, ../scss/_else.scss */
 .date {
   color: #5c5c5d;
   font-size: 12px;
 }
 
-/* line 120, ../scss/_else.scss */
+/* line 140, ../scss/_else.scss */
 .allnews {
   color: #5c5c5d;
   font-family: "Arial";
   font-size: 12px;
 }
-/* line 124, ../scss/_else.scss */
+/* line 144, ../scss/_else.scss */
 .allnews:hover {
   color: inherit;
   text-decoration: none;
 }
 
-/* line 130, ../scss/_else.scss */
+/* line 150, ../scss/_else.scss */
 .news-item {
   margin-bottom: 29px;
 }
-/* line 132, ../scss/_else.scss */
+/* line 152, ../scss/_else.scss */
 .news-item .date {
   display: block;
   margin-bottom: 8px;
 }
-/* line 136, ../scss/_else.scss */
+/* line 156, ../scss/_else.scss */
 .news-item p {
   margin-bottom: 8px;
 }
 
-/* line 143, ../scss/_else.scss */
+/* line 163, ../scss/_else.scss */
 .accordion ul li {
   margin: 15px 0;
 }
-/* line 145, ../scss/_else.scss */
+/* line 165, ../scss/_else.scss */
 .accordion ul li a {
   font-size: 18px;
   color: #005B97;
@@ -408,28 +434,28 @@ main h1.blue {
   line-height: 1;
   padding: 7px 8px 5px;
 }
-/* line 152, ../scss/_else.scss */
+/* line 172, ../scss/_else.scss */
 .accordion ul li a.accordion__parent:hover {
   background-color: #EEE;
 }
-/* line 158, ../scss/_else.scss */
+/* line 178, ../scss/_else.scss */
 .accordion ul li.active a.accordion__parent {
   color: #FFF;
   background-color: #00b4f0;
 }
-/* line 162, ../scss/_else.scss */
+/* line 182, ../scss/_else.scss */
 .accordion ul li.active ul {
   max-height: 300px;
   height: auto;
 }
-/* line 165, ../scss/_else.scss */
+/* line 185, ../scss/_else.scss */
 .accordion ul li.active ul li.subactive a {
   background-color: #88B325;
   color: #FFF;
   padding-left: 0;
   margin-left: 35px;
 }
-/* line 170, ../scss/_else.scss */
+/* line 190, ../scss/_else.scss */
 .accordion ul li.active ul li.subactive a:before {
   position: relative;
   left: -17px;
@@ -438,7 +464,7 @@ main h1.blue {
   text-decoration: none !important;
   color: #005B97;
 }
-/* line 182, ../scss/_else.scss */
+/* line 202, ../scss/_else.scss */
 .accordion ul li ul {
   max-height: 0;
   overflow: hidden;
@@ -447,16 +473,16 @@ main h1.blue {
   -webkit-transition: max-height 0.5s ease;
   transition: max-height 0.5s ease;
 }
-/* line 188, ../scss/_else.scss */
+/* line 208, ../scss/_else.scss */
 .accordion ul li ul li a {
   font-size: 16px;
   padding-left: 27px;
 }
-/* line 191, ../scss/_else.scss */
+/* line 211, ../scss/_else.scss */
 .accordion ul li ul li a:hover {
   opacity: 0.8;
 }
-/* line 194, ../scss/_else.scss */
+/* line 214, ../scss/_else.scss */
 .accordion ul li ul li a:before {
   position: relative;
   left: -9px;
@@ -465,7 +491,7 @@ main h1.blue {
   text-decoration: none !important;
 }
 
-/* line 209, ../scss/_else.scss */
+/* line 229, ../scss/_else.scss */
 table {
   border-collapse: collapse;
   width: 100%;
@@ -512,7 +538,7 @@ table tfoot th, table tfoot td {
 table th:first-child {
   border-right: 1px solid #e0e0e0;
 }
-/* line 222, ../scss/_else.scss */
+/* line 242, ../scss/_else.scss */
 table th {
   background-color: #E0E0E0;
   color: #000;
@@ -556,16 +582,16 @@ table th tfoot th, table th tfoot td {
 table th th:first-child {
   border-right: 1px solid #e0e0e0;
 }
-/* line 232, ../scss/_else.scss */
+/* line 252, ../scss/_else.scss */
 table th:first-child {
   border-right: 1px solid #E0E0E0;
 }
-/* line 238, ../scss/_else.scss */
+/* line 258, ../scss/_else.scss */
 table tr td {
   background-color: #fff;
   padding: 10px;
 }
-/* line 244, ../scss/_else.scss */
+/* line 264, ../scss/_else.scss */
 table tr:nth-child(2n+1) td {
   background-color: #fff;
 }

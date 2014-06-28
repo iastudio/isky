@@ -1,0 +1,20 @@
+- var active = 2
+- var pageName = 'Каталог товаров'
+include includes/settings
+doctype html
+html(lang='ru').no-js
+  head
+    include includes/head
+  body
+    .page-wrap
+      include includes/header
+      main
+        .container
+          h1.orange Каталог товаров
+          .breadcrumbs
+            ul
+              li: a(href="#") Главная
+              li: a(href="#") Каталог товаров
+
+    include includes/footer
+    include includes/tail
