@@ -1,0 +1,82 @@
+- var active = 2
+- var pageName = 'Автопринадлежности - Каталог товаров'
+include includes/settings
+doctype html
+html(lang='ru').no-js
+  head
+    include includes/head
+  body
+    .page-wrap
+      include includes/header
+      main
+        .container
+          h1.orange Автопринадлежности
+          .breadcrumbs
+            ul
+              li: a(href="#") Главная
+              li: a(href="#") Каталог товаров
+        .container
+          .cat-item
+            .cat-item__image
+              a(href="#")
+                img(src="i/cat-icons/icon-autoaccessories.png", data-2x="i/cat-icons/icon-autoaccessories@2x.png")
+            .cat-item__content
+              a(href="#")
+                h3 Автопринадлежности
+              ul
+                li: a(href="#") Ароматизаторы
+                li: a(href="#") Буксировочные тросы
+                li: a(href="#") Влажные салфетки
+                li: a(href="#") Компрессоры
+                li: a(href="#") Органайзеры
+                li: a(href="#") Провода прикуривания
+                li: a(href="#") Разное
+                li: a(href="#") Термо-кружки
+          .cat-item
+            .cat-item__image
+              a(href="#")
+                img(src="i/cat-icons/icon-mats.png", data-2x="i/cat-icons/icon-mats@2x.png")
+            .cat-item__content
+              a(href="#")
+                h3 Коврики
+              ul
+                li: a(href="#") Ванночки для салона
+                li: a(href="#") Коврики для салона
+          .cat-item
+            .cat-item__image
+              a(href="#")
+                img(src="i/cat-icons/icon-covers.png", data-2x="i/cat-icons/icon-covers@2x.png")
+            .cat-item__content
+              a(href="#")
+                h3 Чехлы и накидки
+              ul
+                li: a(href="#") Летние накидки
+                li: a(href="#") Меховые накидки на сиденья
+                li: a(href="#") Накидки из микрофибры
+                li: a(href="#") Накидки с подогревом и массажем
+                li: a(href="#") Тканевые чехлы на сиденья
+          .cat-item
+            .cat-item__image
+              a(href="#")
+                img(src="i/cat-icons/icon-stwheelcovers.png", data-2x="i/cat-icons/icon-stwheelcovers@2x.png")
+            .cat-item__content
+              a(href="#")
+                h3 Чехлы на руль
+              ul
+                li: a(href="#") Чехлы из натуральной кожи
+                li: a(href="#") Чехлы для руля ПВХ
+          .cat-item
+            .cat-item__image
+              a(href="#")
+                img(src="i/cat-icons/icon-clingo.png", data-2x="i/cat-icons/icon-clingo@2x.png")
+            .cat-item__content
+              a(href="#")
+                h3 Clingo
+              ul
+                li: a(href="#") Влажные салфетки
+                li: a(href="#") Зимние автопринадлежности
+                li: a(href="#") Летние автопринадлежности
+
+
+    include includes/footer
+    include includes/tail
