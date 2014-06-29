@@ -3,6 +3,23 @@ var sliderAuto = true; // Slider auto-change
 var sliderTimeout = 4000; // Slider auto-change interval
 
 /////////////////
+// IMAGES @2X  //
+/////////////////
+(function(){
+
+  if(window.devicePixelRatio >= 1.2){
+      var images = document.getElementsByTagName('img');
+      for(var i=0;i < images.length;i++){
+          var attr = images[i].getAttribute('data-2x');
+          if(attr){
+              images[i].src = attr;
+          }
+      }
+  }
+
+})();
+
+/////////////////
 //   SLIDER    //
 /////////////////
 
