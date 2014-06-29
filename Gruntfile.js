@@ -100,7 +100,7 @@ module.exports = function(grunt) {
       server: {
         options: {
           hostname: '127.0.0.1',
-          port: 3000,
+          port: 3002,
           dest: '.'
         }
       }
@@ -115,9 +115,9 @@ module.exports = function(grunt) {
   grunt.loadNpmTasks('grunt-contrib-copy');
 
   grunt.registerTask('default', [
-    'connect', 
+    'connect',
     'copy',
-    'jade', 
+    'jade',
     'compass',
     'autoprefixer',
     'watch'
