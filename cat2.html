@@ -25,11 +25,11 @@
     <script src="js/vendor/selectivizr-1.0.3b.js"></script>
     <link rel="stylesheet" href="css/ie.css">
     <![endif]-->
-    <script src="js/vendor/modernizr.js"></script><script>document.write('<script src="http://' + (location.host || 'localhost').split(':')[0] + ':35729/livereload.js?snipver=1"></' + 'script>')</script>
+    <script src="js/vendor/modernizr.js"></script>
   </head>
   <body>
     <div class="page-wrap">
-      <header>
+      <header id="header">
         <div class="container">
           <div class="header__logo"><a href="/"><img src="i/logo.png" width="137" height="77"></a></div>
           <div class="header__slogan">Удовольствие от поездки</div>
@@ -54,73 +54,63 @@
       </header>
       <main>
         <div class="container">
-          <h1 class="orange">Автопринадлежности</h1>
-          <div class="breadcrumbs">
-            <ul>
-              <li><a href="#">Главная</a></li>
-              <li><a href="#">Каталог товаров</a></li>
-            </ul>
-          </div>
-        </div>
-        <div class="container">
-          <div class="cat-item">
-            <div class="cat-item__image"><a href="#"><img src="i/cat-icons/icon-autoaccessories.png" data-2x="i/cat-icons/icon-autoaccessories@2x.png"></a></div>
-            <div class="cat-item__content"><a href="#">
-                <h3>Автопринадлежности</h3></a>
+          <aside>
+            <h2>Каталог продукции</h2>
+            <nav class="accordion">
               <ul>
-                <li><a href="#">Ароматизаторы</a></li>
-                <li><a href="#">Буксировочные тросы</a></li>
-                <li><a href="#">Влажные салфетки</a></li>
-                <li><a href="#">Компрессоры</a></li>
-                <li><a href="#">Органайзеры</a></li>
-                <li><a href="#">Провода прикуривания</a></li>
-                <li><a href="#">Разное</a></li>
-                <li><a href="#">Термо-кружки</a></li>
+                <li class="active"><a href="#" class="accordion__parent">Автопринадлежности</a>
+                  <ul>
+                    <li class="subactive"><a href="#">Автомобильные холодильники</a></li>
+                    <li><a href="#">Ароматизаторы</a></li>
+                    <li><a href="#">Буксировочные тросы</a></li>
+                    <li><a href="#">Домкраты</a></li>
+                    <li><a href="#">Компрессоры</a></li>
+                    <li><a href="#">Органайзеры</a></li>
+                    <li><a href="#">Провода прикуривания</a></li>
+                    <li><a href="#">Разное</a></li>
+                  </ul>
+                </li>
+                <li><a href="#" class="accordion__parent">Коврики</a>
+                  <ul>
+                    <li><a href="#">Ванночки</a></li>
+                    <li><a href="#">Плоские</a></li>
+                    <li><a href="#">Комбинированные</a></li>
+                    <li><a href="#">Трансформ</a></li>
+                  </ul>
+                </li>
+                <li><a href="#" class="accordion__parent">Чехлы и накидки</a>
+                  <ul>
+                    <li><a href="#">Компрессоры</a></li>
+                    <li><a href="#">Провода прикуривания</a></li>
+                  </ul>
+                </li>
+                <li><a href="#" class="accordion__parent">Чехлы на руль</a>
+                  <ul>
+                    <li><a href="#">Компрессоры</a></li>
+                    <li><a href="#">Провода прикуривания</a></li>
+                  </ul>
+                </li>
+              </ul>
+            </nav>
+          </aside>
+          <div class="content">
+            <h1 class="orange">Автопринадлежности</h1>
+            <div class="breadcrumbs">
+              <ul>
+                <li><a href="#">Главная</a></li>
+                <li><a href="#">Каталог товаров</a></li>
+                <li><a href="#">Clingo</a></li>
               </ul>
             </div>
-          </div>
-          <div class="cat-item">
-            <div class="cat-item__image"><a href="#"><img src="i/cat-icons/icon-mats.png" data-2x="i/cat-icons/icon-mats@2x.png"></a></div>
-            <div class="cat-item__content"><a href="#">
-                <h3>Коврики</h3></a>
-              <ul>
-                <li><a href="#">Ванночки для салона</a></li>
-                <li><a href="#">Коврики для салона</a></li>
-              </ul>
-            </div>
-          </div>
-          <div class="cat-item">
-            <div class="cat-item__image"><a href="#"><img src="i/cat-icons/icon-covers.png" data-2x="i/cat-icons/icon-covers@2x.png"></a></div>
-            <div class="cat-item__content"><a href="#">
-                <h3>Чехлы и накидки</h3></a>
-              <ul>
-                <li><a href="#">Летние накидки</a></li>
-                <li><a href="#">Меховые накидки на сиденья</a></li>
-                <li><a href="#">Накидки из микрофибры</a></li>
-                <li><a href="#">Накидки с подогревом и массажем</a></li>
-                <li><a href="#">Тканевые чехлы на сиденья</a></li>
-              </ul>
-            </div>
-          </div>
-          <div class="cat-item">
-            <div class="cat-item__image"><a href="#"><img src="i/cat-icons/icon-stwheelcovers.png" data-2x="i/cat-icons/icon-stwheelcovers@2x.png"></a></div>
-            <div class="cat-item__content"><a href="#">
-                <h3>Чехлы на руль</h3></a>
-              <ul>
-                <li><a href="#">Чехлы из натуральной кожи</a></li>
-                <li><a href="#">Чехлы для руля ПВХ</a></li>
-              </ul>
-            </div>
-          </div>
-          <div class="cat-item">
-            <div class="cat-item__image"><a href="#"><img src="i/cat-icons/icon-clingo.png" data-2x="i/cat-icons/icon-clingo@2x.png"></a></div>
-            <div class="cat-item__content"><a href="#">
-                <h3>Clingo</h3></a>
-              <ul>
-                <li><a href="#">Влажные салфетки</a></li>
-                <li><a href="#">Зимние автопринадлежности</a></li>
-                <li><a href="#">Летние автопринадлежности</a></li>
-              </ul>
+            <div class="items">
+              <div class="cat-item--small"><a href="#"><img src="i/cat-icons/icon-towingropes.png" data-2x="i/cat-icons/icon-towingropes@2x.png"><span>Буксировочные тросы</span></a></div>
+              <div class="cat-item--small"><a href="#"><img src="i/cat-icons/icon-jacks.png" data-2x="i/cat-icons/icon-jacks@2x.png"><span>Домкраты</span></a></div>
+              <div class="cat-item--small"><a href="#"><img src="i/cat-icons/icon-compressors.png" data-2x="i/cat-icons/icon-compressors@2x.png"><span>Компрессоры</span></a></div>
+              <div class="cat-item--small"><a href="#"><img src="i/cat-icons/icon-refrigerators.png" data-2x="i/cat-icons/icon-refrigerators@2x.png"><span>Автомобильные холодильники</span></a></div>
+              <div class="cat-item--small"><a href="#"><img src="i/cat-icons/icon-flavorings.png" data-2x="i/cat-icons/icon-flavorings@2x.png"><span>Ароматизаторы</span></a></div>
+              <div class="cat-item--small"><a href="#"><img src="i/cat-icons/icon-wires.png" data-2x="i/cat-icons/icon-wires@2x.png"><span>Провода прикуривания</span></a></div>
+              <div class="cat-item--small"><a href="#"><img src="i/cat-icons/icon-organizers.png" data-2x="i/cat-icons/icon-organizers@2x.png"><span>Органайзеры</span></a></div>
+              <div class="cat-item--small"><a href="#"><img src="i/cat-icons/icon-else.png" data-2x="i/cat-icons/icon-else@2x.png"><span>Разное</span></a></div>
             </div>
           </div>
         </div>
@@ -138,8 +128,11 @@
     <!--[if lte IE 8]>
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.9.1/jquery.min.js"></script>
     <![endif]-->
-    <script src="//api-maps.yandex.ru/2.1-dev/?lang=ru-RU&amp;load=package.full" type="text/javascript"></script>
     <script src="js/vendor/jquery.placeholder.js"></script>
+    <script src="js/vendor/smooth-scroll.js"></script>
+    <script src="js/vendor/jquery.magnific-popup.min.js"></script>
+    <script src="js/vendor/skrollr.min.js"></script>
+    <script src="js/vendor/jquery-ias.min.js"></script>
     <script src="js/app.js"></script>
   </body>
 </html>

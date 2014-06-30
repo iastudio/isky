@@ -2,6 +2,45 @@
 var sliderAuto = true; // Slider auto-change
 var sliderTimeout = 4000; // Slider auto-change interval
 
+(function(){
+
+  $('.colorselect__color').on('click', function(e) {
+    e.preventDefault();
+    $('.colorselect__color.active').removeClass('active');
+    $(this).addClass('active');
+  });
+
+  // Magnific Popup (Lightbox)
+  // Docs: https://github.com/dimsemenov/Magnific-Popup
+  $('.item-full__images').magnificPopup({
+    delegate: 'a',
+    type: 'image'
+  });
+
+  // Skrollr
+  // Docs: https://github.com/Prinzhorn/skrollr
+  var s = skrollr.init({});
+
+  // Smooth Scroll
+  // Docs: https://github.com/cferdinandi/smooth-scroll
+  smoothScroll.init();
+
+  // Infinite Ajax Scroll
+  // Docs: https://github.com/webcreate/infinite-ajax-scroll
+  var ias = $.ias({
+    container: "#items",
+    item: ".item-full",
+    pagination: "#pagination",
+    next: ".next"
+  });
+
+  ias.extension(new IASTriggerExtension({offset: 100}));
+  ias.extension(new IASSpinnerExtension({
+    html: '<div class="spinner"><i class="fa fa-circle-o-notch fa-spin"></i></div>'
+  }));
+
+})();
+
 /////////////////
 // IMAGES @2X  //
 /////////////////
@@ -77,102 +116,20 @@ var sliderTimeout = 4000; // Slider auto-change interval
 
 })();
 
-// 	////////////////////////
-// 	//  PLACEHOLDERS FIX  //
-// 	////////////////////////
+////////////////////////
+//  PLACEHOLDERS FIX  //
+////////////////////////
 
-// 	if ($.fn.placeholder.input && $.fn.placeholder.textarea) {
-// 	} else if ($.fn.placeholder.input) {
-// 		$('textarea').placeholder();
-// 	} else {
-// 		$('input, textarea').placeholder();
-// 	}
+(function(){
 
-// 	///////////////////
-// 	//  SPEC-SLIDER  //
-// 	///////////////////
+  if ($.fn.placeholder.input && $.fn.placeholder.textarea) {
+  } else if ($.fn.placeholder.input) {
+  	$('textarea').placeholder();
+  } else {
+  	$('input, textarea').placeholder();
+  }
 
-
-// 	(function(){
-
-// 		var easing = "easeInOutSine";
-// 		$('.specslider__nav a').on( 'click', function( event ) {
-// 			//debugger;
-// 			var $this = $(this);
-// 			var $inner = $this.parent().parent().find('.specslider__wrapper');
-// 			var maxCount = $inner.find('.specslider__item').length-4;
-// 			if ($inner.attr('data-count') == undefined)
-// 				$inner.attr('data-count', 0);
-// 			var count = parseInt($inner.attr('data-count'));
-// 			var marg = parseInt($inner.css('margin-left'));
-// 			var width = parseInt($inner.find('.specslider__item').css('width'));
-
-// 			event.preventDefault();
-// 			if ($inner.is(':animated')) {return;}
-
-// 		    if ( $this.hasClass("specslider__nav--prev") ) {
-// 		    	if (count <= 0) {
-// 		    		return;
-// 		    	} else {
-// 		    		marg = marg+width;
-// 		    		count -= 1;
-// 		    	}
-// 		    } else if (count < maxCount) {
-// 				marg = marg-width;
-// 				count += 1;
-// 			}
-
-// 			$inner.animate({
-// 				marginLeft: marg+'px'
-// 			}, {
-// 			  duration: 500,
-// 			  easing: easing
-// 			});
-
-// 			$inner.attr('data-count', count);
-
-// 		});
-// 	})();
-
-// })(jQuery);
-
-// 	////////////////////////
-// 	//  FORMS VALIDATION  //
-// 	////////////////////////
-
-// 	$('a.submit').click(function(e) {
-// 		e.preventDefault();
-// 		$(this).parent().submit();
-// 	});
-
-// 	$('form').each(function() {
-//         $(this).validate({
-//             errorPlacement: $.noop,
-// 	        submitHandler: function(form) {
-// 			    $(form).submitForm();
-// 			}
-//         });
-//     });
-
-// 	/////////////////
-// 	//    SCROLL   //
-// 	/////////////////
-
-// 	if (BrowserDetect.browser == 'Opera' && BrowserDetect.version <= 12) {
-// 		$('a[data-scroll]').click(function(e){
-// 		    scrollFrom = $(window).scrollTop();
-// 		    var target = $(this).attr('href');
-// 		    $(window.opera?'html':'html, body').animate({
-// 		        scrollTop: $(target).offset().top-0
-// 		    },1000);
-// 		});
-// 	} else {
-// 		smoothScroll.init({
-// 		    speed: 500, // scroll speed (ms)
-// 		    easing: 'easeInOutCubic', // easing
-// 		    updateURL: true // url hash update
-// 		});
-// 	}
+})();
 
 // 	/////////////
 // 	//   MAP   //
@@ -204,168 +161,6 @@ var sliderTimeout = 4000; // Slider auto-change interval
 
 // 	    myMap.geoObjects.add(myPlacemark);
 // 	    myMap.behaviors.disable('scrollZoom');
-// 	});
-
-// 	/////////////////////////
-// 	//  RANGE SLIDER       //
-// 	/////////////////////////
-
-// 	$('#calculate .header-button').on( 'click', function() {
-// 	//spagetti
-// 	  var text = '';
-// 	  if (!$(this).hasClass('active')) {
-// 		($(this).hasClass('moto')) ? text = 'мотоцикла' : text = 'спецтехники';
-// 		$(this).parent().find('h1').html('Расчитать стоимость ' + text);
-// 		$(this).parent().find('.active').removeClass('active');
-// 		$(this).addClass('active');
-// 	  } else {
-// 		$(this).parent().find('h1').html('Расчитать стоимость авто');
-// 	  	$(this).removeClass('active');
-// 	  }
-// 	  var val = $(this).parent().find('h1').html();
-// 	  $('#calculate form').attr('data-title', val);
-// 	});
-
-// 	$("#slider-range").slider({
-// 	    range: true,
-// 	    min: 2005,
-// 	    max: 2014,
-// 	    step: 1,
-// 	    values: [2009, 2011],
-// 	    slide: function( event, ui ) {
-// 	        $("#year-1").val(ui.values[0]);
-// 	        $("#year-2").val(ui.values[1]);
-// 	      }
-// 	});
-
-// 	/////////////////////////
-// 	//  ISOTOPE (GALLERY)  //
-// 	/////////////////////////
-
-// 	var $container = $('#container');
-// 	$container.isotope({
-// 	  itemSelector: '.item',
-// 	  layoutMode: 'fitRows'
-// 	});
-
-//     $container.isotope({ filter: '.auto' });
-
-// 	$('#filters').on( 'click', 'a', function( event ) {
-// 	  event.preventDefault();
-// 	  var filterValue = $(this).attr('data-filter-value');
-// 	  $container.isotope({ filter: filterValue });
-// 	  $('#filters li.active').removeClass("active");
-// 	  $(this).parent().addClass("active");
-// 	});
-
-// 	/////////////////
-// 	//  COUNTDOWN  //
-// 	/////////////////
-
-// 	var ts = new Date().getTime();
-// 	var interval = 3 * 24 * 60 * 60 * 1000;
-// 	var tm = 0;
-// 	var result = tm + interval * ( Math.floor((ts - tm) / interval) + 1 ) - ts;
-
-// 	FlipClock.Lang.Russian = {
-// 		'years'   : 'Лет',
-// 		'months'  : 'Месяцев',
-// 		'days'    : 'Дней',
-// 		'hours'   : 'Часов',
-// 		'minutes' : 'Минут',
-// 		'seconds' : 'Секунд'
-// 	};
-
-// 	FlipClock.Lang['ru'] = FlipClock.Lang.Russian;
-
-// 	var clock = $('#countdown').FlipClock(result/1000, {
-// 		countdown: true,
-// 		language: 'ru'
-// 	});
-
-// 	$('.flip-clock-wrapper ul li a').on( 'click', function( event ) {
-// 		event.preventDefault();
-// 	});
-
-// 	/////////////////
-// 	//    ELSE     //
-// 	/////////////////
-
-// 	$('.logo').on('click', function(e) {
-// 		e.preventDefault();
-// 	});
-
-// })(jQuery);
-
-// ////////////////////////////
-// //  FORM SUBMIT FUNCTION  //
-// ////////////////////////////
-
-// $.fn.submitForm = function() {
-
-// 	var form = $(this);
-// 	var preloaderHTML = '<div class="form-preloader" style="display: none;"><div><i class="fa fa-refresh fa-spin"></i></div></div>';
-// 	var okHTML = '<i class="fa fa-check"></i><br />Сообщение отправлено!';
-// 	var errorHTML = '<i class="fa fa-frown-o"></i><br />Произошла ошибка!';
-
-// 	form.parent().append(preloaderHTML);
-// 	var preloader = $(this).parent().find('.form-preloader');
-
-// 	var preloaderHeight = preloader.height();
-// 	var innerHeight = preloader.find('div').height();
-// 	var preloaderPadding = ((preloaderHeight/2) - innerHeight/2) + 10;
-// 	preloader.css("padding-top", preloaderPadding + "px");
-
-// 	preloader.fadeIn(300);
-
-// 	var fields = form.find("input[type=text], input[type=email]");
-// 	//var fields = form.find("input[type=text], input[type=email], input[type=checkbox], textarea");
-// 	var data = {};
-// 	data["formName"] = form.attr("data-title");
-
-
-
-// 	$(fields).each(function(){
-// 		var name = $(this).attr("name");
-
-// 		// if ($(this).attr("type")=="checkbox") {
-// 		// 	if ($(this).is(':checked')) {
-// 		// 		val = "on";
-// 		// 	} else {
-// 		// 		val = "off";
-// 		// 	}
-// 		// } else {
-// 			var val = $(this).val();
-// 		//}
-
-// 		data[name] = val;
-// 	});
-
-// 	data["secret"] = "2f7d9f0d0acf89a8f6a57d79f0f7d475";
-
-// 	var isError = false;
-
-// 	$.ajax({
-// 	  type: "POST",
-// 	  url: "/",
-// 	  data: JSON.stringify(data),
-// 	  contentType: "application/json; charset=utf-8",
-//       success: function (data) {
-//       	preloader.find('div').html(okHTML);
-//       },
-//       error: function (data) {
-//       	isError = true;
-//       	preloader.find('div').html(errorHTML);
-//       }
-// 	});
-
-// 	$('.form-preloader').click(function() {
-// 		$(this).fadeOut(300, function() {
-// 			$(this).remove();
-// 		});
-// 		if (!isError) {
-// 			fields.val('');
-// 		}
 // 	});
 
 /////////////////////////
