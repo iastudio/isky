@@ -10,72 +10,78 @@ html(lang='ru').no-js
       include includes/header
       main
         .container
-          h1.orange Автопринадлежности
-          .breadcrumbs
-            ul
-              li: a(href="#") Главная
-              li: a(href="#") Каталог товаров
-        .container
-          .cat-item
-            .cat-item__image
-              a(href="#")
-                img(src="i/cat-icons/icon-autoaccessories.png", data-2x="i/cat-icons/icon-autoaccessories@2x.png")
-            .cat-item__content
-              a(href="#")
-                h3 Автопринадлежности
+          aside
+            h2 Каталог продукции
+            nav.accordion
               ul
-                li: a(href="#") Ароматизаторы
-                li: a(href="#") Буксировочные тросы
-                li: a(href="#") Влажные салфетки
-                li: a(href="#") Компрессоры
-                li: a(href="#") Органайзеры
-                li: a(href="#") Провода прикуривания
-                li: a(href="#") Разное
-                li: a(href="#") Термо-кружки
-          .cat-item
-            .cat-item__image
-              a(href="#")
-                img(src="i/cat-icons/icon-mats.png", data-2x="i/cat-icons/icon-mats@2x.png")
-            .cat-item__content
-              a(href="#")
-                h3 Коврики
+                li.active
+                  a(href="#").accordion__parent Автопринадлежности
+                  ul
+                    li.subactive: a(href="#") Автомобильные холодильники
+                    li: a(href="#") Ароматизаторы
+                    li: a(href="#") Буксировочные тросы
+                    li: a(href="#") Домкраты
+                    li: a(href="#") Компрессоры
+                    li: a(href="#") Органайзеры
+                    li: a(href="#") Провода прикуривания
+                    li: a(href="#") Разное
+                li
+                  a(href="#").accordion__parent Коврики
+                  ul
+                    li: a(href="#") Ванночки
+                    li: a(href="#") Плоские
+                    li: a(href="#") Комбинированные
+                    li: a(href="#") Трансформ
+                li
+                  a(href="#").accordion__parent Чехлы и накидки
+                  ul
+                    li: a(href="#") Компрессоры
+                    li: a(href="#") Провода прикуривания
+                li
+                  a(href="#").accordion__parent Чехлы на руль
+                  ul
+                    li: a(href="#") Компрессоры
+                    li: a(href="#") Провода прикуривания
+          .content
+            h1.orange Автопринадлежности
+            .breadcrumbs
               ul
-                li: a(href="#") Ванночки для салона
-                li: a(href="#") Коврики для салона
-          .cat-item
-            .cat-item__image
-              a(href="#")
-                img(src="i/cat-icons/icon-covers.png", data-2x="i/cat-icons/icon-covers@2x.png")
-            .cat-item__content
-              a(href="#")
-                h3 Чехлы и накидки
-              ul
-                li: a(href="#") Летние накидки
-                li: a(href="#") Меховые накидки на сиденья
-                li: a(href="#") Накидки из микрофибры
-                li: a(href="#") Накидки с подогревом и массажем
-                li: a(href="#") Тканевые чехлы на сиденья
-          .cat-item
-            .cat-item__image
-              a(href="#")
-                img(src="i/cat-icons/icon-stwheelcovers.png", data-2x="i/cat-icons/icon-stwheelcovers@2x.png")
-            .cat-item__content
-              a(href="#")
-                h3 Чехлы на руль
-              ul
-                li: a(href="#") Чехлы из натуральной кожи
-                li: a(href="#") Чехлы для руля ПВХ
-          .cat-item
-            .cat-item__image
-              a(href="#")
-                img(src="i/cat-icons/icon-clingo.png", data-2x="i/cat-icons/icon-clingo@2x.png")
-            .cat-item__content
-              a(href="#")
-                h3 Clingo
-              ul
-                li: a(href="#") Влажные салфетки
-                li: a(href="#") Зимние автопринадлежности
-                li: a(href="#") Летние автопринадлежности
+                li: a(href="#") Главная
+                li: a(href="#") Каталог товаров
+                li: a(href="#") Clingo
+            .items
+              .cat-item--small
+                a(href="#")
+                  img(src="i/cat-icons/icon-towingropes.png", data-2x="i/cat-icons/icon-towingropes@2x.png")
+                  span Буксировочные тросы
+              .cat-item--small
+                a(href="#")
+                  img(src="i/cat-icons/icon-jacks.png", data-2x="i/cat-icons/icon-jacks@2x.png")
+                  span Домкраты
+              .cat-item--small
+                a(href="#")
+                  img(src="i/cat-icons/icon-compressors.png", data-2x="i/cat-icons/icon-compressors@2x.png")
+                  span Компрессоры
+              .cat-item--small
+                a(href="#")
+                  img(src="i/cat-icons/icon-refrigerators.png", data-2x="i/cat-icons/icon-refrigerators@2x.png")
+                  span Автомобильные холодильники
+              .cat-item--small
+                a(href="#")
+                  img(src="i/cat-icons/icon-flavorings.png", data-2x="i/cat-icons/icon-flavorings@2x.png")
+                  span Ароматизаторы
+              .cat-item--small
+                a(href="#")
+                  img(src="i/cat-icons/icon-wires.png", data-2x="i/cat-icons/icon-wires@2x.png")
+                  span Провода прикуривания
+              .cat-item--small
+                a(href="#")
+                  img(src="i/cat-icons/icon-organizers.png", data-2x="i/cat-icons/icon-organizers@2x.png")
+                  span Органайзеры
+              .cat-item--small
+                a(href="#")
+                  img(src="i/cat-icons/icon-else.png", data-2x="i/cat-icons/icon-else@2x.png")
+                  span Разное
 
 
     include includes/footer

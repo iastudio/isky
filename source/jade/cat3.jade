@@ -1,0 +1,109 @@
+- var active = 2
+- var pageName = 'Влажные салфетки - Каталог товаров'
+include includes/settings
+doctype html
+html(lang='ru').no-js
+  head
+    include includes/head
+  body
+    .page-wrap
+      include includes/header
+      main
+        .container
+          aside
+            h2 Влажные салфетки
+            nav.accordion
+              ul
+                li
+                  a(href="#").accordion__parent Автопринадлежности
+                  ul
+                    li: a(href="#") Автомобильные холодильники
+                    li: a(href="#") Ароматизаторы
+                    li: a(href="#") Буксировочные тросы
+                    li: a(href="#") Домкраты
+                    li: a(href="#") Компрессоры
+                    li: a(href="#") Органайзеры
+                    li: a(href="#") Провода прикуривания
+                    li: a(href="#") Разное
+                li.active
+                  a(href="#").accordion__parent Коврики
+                  ul
+                    li.subactive: a(href="#") Ванночки
+                    li: a(href="#") Плоские
+                    li: a(href="#") Комбинированные
+                    li: a(href="#") Трансформ
+                li
+                  a(href="#").accordion__parent Чехлы и накидки
+                  ul
+                    li: a(href="#") Компрессоры
+                    li: a(href="#") Провода прикуривания
+                li
+                  a(href="#").accordion__parent Чехлы на руль
+                  ul
+                    li: a(href="#") Компрессоры
+                    li: a(href="#") Провода прикуривания
+          .content
+            h1.orange Автопринадлежности
+            .breadcrumbs
+              ul
+                li: a(href="#") Главная
+                li: a(href="#") Каталог товаров
+                li: a(href="#") Clingo
+                li: a(href="#") Влажные салфетки
+            .items#items
+              a.scrolltop(data-scroll, href="#header", data-0="opacity: 0;", data-1000="opacity: 1;"): i.fa.fa-chevron-up
+              .item-full
+                .item-full__images
+                  a.image__main(href="i/placeholders/placeholder-5.jpg")
+                    .ribbon NEW
+                    img(src="i/placeholders/placeholder-5.jpg")
+                  a.image__small(href="i/placeholders/placeholder-6.jpg")
+                    img(src="i/placeholders/placeholder-7.jpg")
+                  a.image__small(href="i/placeholders/placeholder-7.jpg")
+                    img(src="i/placeholders/placeholder-8.jpg")
+                .item-full__content
+                  h5 Коврики автомобильные Artic
+                  p Благодаря более глубоким канавкам влага объемом до 1,5 л. удерживается в коврике и не распространяется по салону.<br><br>Размер передних ковриков 72*47 см, задних – 45*47 см.
+                  a(href="#").btn Подробнее &rarr;
+              .item-full
+                .item-full__images
+                  a.image__main(href="i/placeholders/placeholder-5.jpg")
+                    img(src="i/placeholders/placeholder-6.jpg")
+                  a.image__small(href="i/placeholders/placeholder-6.jpg")
+                    img(src="i/placeholders/placeholder-7.jpg")
+                  a.image__small(href="i/placeholders/placeholder-7.jpg")
+                    img(src="i/placeholders/placeholder-8.jpg")
+                .item-full__content
+                  h5 Коврики автомобильные Artic
+                  p Благодаря более глубоким канавкам влага объемом до 1,5 л. удерживается в коврике и не распространяется по салону.<br><br>Размер передних ковриков 72*47 см, задних – 45*47 см.
+                  a(href="#").btn Подробнее &rarr;
+              .item-full
+                .item-full__images
+                  a.image__main(href="i/placeholders/placeholder-5.jpg")
+                    .ribbon ХИТ
+                    img(src="i/placeholders/placeholder-5.jpg")
+                  a.image__small(href="i/placeholders/placeholder-6.jpg")
+                    img(src="i/placeholders/placeholder-7.jpg")
+                  a.image__small(href="i/placeholders/placeholder-7.jpg")
+                    img(src="i/placeholders/placeholder-8.jpg")
+                .item-full__content
+                  h5 Коврики автомобильные Artic
+                  p Благодаря более глубоким канавкам влага объемом до 1,5 л. удерживается в коврике и не распространяется по салону.<br><br>Размер передних ковриков 72*47 см, задних – 45*47 см.
+                  a(href="#").btn Подробнее &rarr;
+              .item-full
+                .item-full__images
+                  a.image__main(href="i/placeholders/placeholder-5.jpg")
+                    img(src="i/placeholders/placeholder-6.jpg")
+                  a.image__small(href="i/placeholders/placeholder-6.jpg")
+                    img(src="i/placeholders/placeholder-7.jpg")
+                  a.image__small(href="i/placeholders/placeholder-7.jpg")
+                    img(src="i/placeholders/placeholder-8.jpg")
+                .item-full__content
+                  h5 Коврики автомобильные Artic
+                  p Благодаря более глубоким канавкам влага объемом до 1,5 л. удерживается в коврике и не распространяется по салону.<br><br>Размер передних ковриков 72*47 см, задних – 45*47 см.
+                  a(href="#").btn Подробнее &rarr;
+            #pagination
+              a(href="cat3.html").next next
+
+    include includes/footer
+    include includes/tail

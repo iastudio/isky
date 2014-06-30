@@ -7,3 +7,13 @@
 	     url('NeoSansPro-Regular.ttf')  format('truetype'),
 	     url('NeoSansPro-Regular.svg#NeoSansPro-Regular') format('svg');
 }
+
+@font-face {
+  font-family: 'Neo Sans Pro';
+  src: url('NeoSansPro-Light.eot?') format('eot'),
+       url('NeoSansPro-Light.otf')  format('opentype'),
+       url('NeoSansPro-Light.woff') format('woff'),
+       url('NeoSansPro-Light.ttf')  format('truetype'),
+       url('NeoSansPro-Light.svg#NeoSansPro-Light') format('svg');
+  font-weight: 200;
+}
