@@ -14,7 +14,10 @@ var sliderTimeout = 4000; // Slider auto-change interval
   // Docs: https://github.com/dimsemenov/Magnific-Popup
   $('.item-full__images').magnificPopup({
     delegate: 'a',
-    type: 'image'
+    type: 'image',
+    gallery:{
+      enabled:true
+    }
   });
 
   // Skrollr
